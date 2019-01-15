@@ -18,8 +18,8 @@ then
     fi
 
     printf "Do you want thumbnails? [y/n] "
-    read areThumnailsNeeded
-    if [ $areThumnailsNeeded = 'y' ]
+    read areThumbnailsNeeded
+    if [ $areThumbnailsNeeded = 'y' ]
     then
         if [ ! -e thumbnails/ ]
         then
@@ -52,7 +52,7 @@ then
         then
             curl -s "https://lovelive-sunshinemovie.jp/assets/images/txt/txt_${id}.png" > "quoteImages/${filename}.png"
         fi
-        if [ $areThumnailsNeeded = 'y' ]
+        if [ $areThumbnailsNeeded = 'y' ]
         then
             curl -s "https://lovelive-sunshinemovie.jp/iBbC2c2a92mPUeJM/${thumbnail}" > "thumbnails/${filename}.jpg"
         fi
